@@ -1,4 +1,4 @@
-# User API SAMALUC Challenge
+# User API Sermaluc Challenge
 
 Este proyecto es una aplicaction springoboot desarrollado con java 17 como entorno de ejecución y con gradle como gestor de proyecto.
 
