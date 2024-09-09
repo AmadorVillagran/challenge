@@ -1,0 +1,87 @@
+openapi: 3.0.1
+info:
+  title: User API
+  description: API para crear usuarios
+  version: 1.0.0
+paths:
+  /users:
+    post:
+      summary: Crear un nuevo usuario
+      operationId: createUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "Juan Rodriguez"
+                email:
+                  type: string
+                  example: "juanrodriguez.org"
+                password:
+                  type: string
+                  example: "hunter2"
+                phones:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      number:
+                        type: string
+                        example: "1234567"
+                      citycode:
+                        type: string
+                        example: "1"
+                      contrycode:
+                        type: string
+                        example: "57"
+              required:
+                - name
+                - email
+                - password
+      responses:
+        '201':
+          description: Usuario creado con éxito
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    format: uuid
+                    example: "2e206cbb-9e45-4c6d-ac3f-87a96e84b6f8"
+                  name:
+                    type: string
+                    example: "Juan Rodriguez"
+                  token:
+                    type: string
+                    example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ1c2VycyIsInN1YiI6Ikp1YW4gUm9kcmlndWV6IiwiaWF0IjoxNzI1ODM4NjQ0fQ.6CTOX6ktdPM6r4alITBB6VM9TA1mCoL5w8zmecndNaY"
+                  isactive:
+                    type: boolean
+                    example: true
+                  created:
+                    type: string
+                    format: date-time
+                    example: "2024-09-08T23:37:24.499+00:00"
+                  modified:
+                    type: string
+                    format: date-time
+                    example: "2024-09-08T23:37:24.499+00:00"
+                  lastLogin:
+                    type: string
+                    format: date-time
+                    example: "2024-09-08T23:37:24.499+00:00"
+        '400':
+          description: Error en la solicitud
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Formato de correo electrónico inválido"
