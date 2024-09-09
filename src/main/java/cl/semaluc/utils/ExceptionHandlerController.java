@@ -6,6 +6,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import cl.semaluc.exceptions.EmailAlreadyRegisteredExpcetion;
+import cl.semaluc.exceptions.EmailExpcetion;
 import cl.semaluc.model.dto.NotificationErrorDTO;
 
 @ControllerAdvice

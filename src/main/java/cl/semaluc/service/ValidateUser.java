@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import cl.semaluc.datasource.UserRepository;
+import cl.semaluc.exceptions.EmailAlreadyRegisteredExpcetion;
+import cl.semaluc.exceptions.EmailExpcetion;
 import cl.semaluc.model.dto.UserDTO;
-import cl.semaluc.utils.EmailAlreadyRegisteredExpcetion;
-import cl.semaluc.utils.EmailExpcetion;
 
 @Service
 public class ValidateUser {

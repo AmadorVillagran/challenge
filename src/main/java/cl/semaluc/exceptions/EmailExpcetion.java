@@ -1,4 +1,4 @@
-package cl.semaluc.utils;
+package cl.semaluc.exceptions;
 
 public class EmailExpcetion  extends RuntimeException{
 	private static final long serialVersionUID = 1L;

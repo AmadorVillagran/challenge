@@ -1,4 +1,4 @@
-package cl.semaluc.utils;
+package cl.semaluc.exceptions;
 
 public class EmailAlreadyRegisteredExpcetion extends RuntimeException {
 

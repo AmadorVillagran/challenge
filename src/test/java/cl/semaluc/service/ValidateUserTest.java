@@ -13,9 +13,9 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import cl.semaluc.datasource.UserRepository;
+import cl.semaluc.exceptions.EmailAlreadyRegisteredExpcetion;
 import cl.semaluc.model.dto.UserDTO;
 import cl.semaluc.model.entity.User;
-import cl.semaluc.utils.EmailAlreadyRegisteredExpcetion;
 
 @ExtendWith(MockitoExtension.class)
 public class ValidateUserTest {
